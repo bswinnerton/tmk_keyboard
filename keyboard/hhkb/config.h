@@ -23,7 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PRODUCT_ID      0xCAFE
 #define DEVICE_VER      0x0104
 #define MANUFACTURER    t.m.k.
-#define PRODUCT         HHKB mod
+#define PRODUCT         Brooks' Super awesome HHKB
 #define DESCRIPTION     t.m.k. keyboard firmware for HHKB mod
 
 
@@ -37,7 +37,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
 /* key combination for command */
-#define IS_COMMAND() (keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT))) 
+#define IS_COMMAND() (keyboard_report->mods == (MOD_BIT(KC_LSHIFT) | MOD_BIT(KC_RSHIFT)))
 
 
 /* period of tapping(ms) */
