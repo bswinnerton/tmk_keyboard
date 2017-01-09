@@ -28,11 +28,11 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
            LSFT,Z,   X,   C,   V,   B,   N,   M,   COMM,DOT, SLSH,RSFT,FN0,           \
                 LALT,LGUI,          SPC,                RGUI,FN1),
 
-    /* Layer 1: Cursor(HHKB mode)
+    /* Layer 1: Multimedia
      * ,-----------------------------------------------------------.
      * |Pwr| F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12|Ins|Del|
      * |-----------------------------------------------------------|
-     * |Caps |   |   |   |   |   |   |   |Psc|Slk|Pus|Up |   |Backs|
+     * |Caps |Prv|Pau|Nxt|   |   |   |   |Psc|Slk|Pus|Up |   |Backs|
      * |-----------------------------------------------------------|
      * |Contro|VoD|VoU|Mut|   |   |  *|  /|Hom|PgU|Lef|Rig|Enter   |
      * |-----------------------------------------------------------|
@@ -42,9 +42,9 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
      *      `--------------------------------------------'
      */
     KEYMAP(PWR, F1,  F2,  F3,  F4,  F5,  F6,  F7,  F8,  F9,  F10, F11, F12, INS, DEL, \
-           CAPS,NO,  NO,  NO,  NO,  NO,  NO,  NO,  PSCR,SLCK,PAUS,UP,  NO,  BSPC,     \
-           LCTL,VOLD,VOLU,MUTE,NO,  NO,  PAST,PSLS,HOME,PGUP,LEFT,RGHT,ENT,           \
-           LSFT,NO,  NO,  NO,  NO,  NO,  PPLS,PMNS,END, PGDN,DOWN,RSFT,FN0,           \
+           CAPS,MPRV,MPLY,MFFD,TRNS,TRNS,TRNS,TRNS,PSCR,SLCK,PAUS,UP,  TRNS,BSPC,     \
+           LCTL,VOLD,VOLU,MUTE,TRNS,TRNS,PAST,PSLS,HOME,PGUP,LEFT,RGHT,ENT,           \
+           LSFT,TRNS,TRNS,TRNS,TRNS,TRNS,PPLS,PMNS,END, PGDN,DOWN,RSFT,FN0,           \
                 LALT,LGUI,          SPC,                RGUI,FN1),
 
     /* Layer 2: Mouse Mode for WASD
@@ -61,22 +61,16 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
      *       `-------------------------------------------'
      */
     KEYMAP(ESC, 1,   2,   3,   4,   5,   6,   7,   8,   9,   0,   MINS,EQL, BSLS,GRV, \
-           TAB, Q,   MS_U,E,   R,   T,   Y,   U,   I,   O,   P,   LBRC,RBRC,BSPC,        \
+           TAB, Q,   MS_U,E,   R,   T,   Y,   U,   I,   O,   P,   LBRC,RBRC,BSPC,     \
            LCTL,MS_L,MS_D,MS_R,F,   G,   H,   J,   K,   L,   SCLN,QUOT,ENT,           \
            LSFT,Z,   X,   C,   V,   B,   N,   M,   COMM,DOT, SLSH,RSFT,FN0,           \
-                LALT,LGUI,          BTN1,               RGUI,FN1),
+                LALT,LGUI,          BTN1,               RGUI,FN1)
 };
-
-
 
 /*
  * Fn action definition
  */
-#ifdef KEYMAP_SECTION_ENABLE
-const uint16_t fn_actions[] __attribute__ ((section (".keymap.fn_actions"))) = {
-#else
-const uint16_t fn_actions[] PROGMEM = {
-#endif
+const action_t fn_actions[] PROGMEM = {
     [0] = ACTION_LAYER_MOMENTARY(1),
     [1] = ACTION_LAYER_TOGGLE(2)
 };
