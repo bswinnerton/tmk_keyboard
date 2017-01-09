@@ -42,29 +42,29 @@ const uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS] PROGMEM = {
      *      `--------------------------------------------'
      */
     KEYMAP(PWR, F1,  F2,  F3,  F4,  F5,  F6,  F7,  F8,  F9,  F10, F11, F12, INS, DEL, \
-           CAPS,MPRV,MPLY,MFFD,TRNS,TRNS,TRNS,TRNS,PSCR,SLCK,PAUS,UP,  TRNS,BSPC,     \
-           LCTL,VOLD,VOLU,MUTE,TRNS,TRNS,PAST,PSLS,HOME,PGUP,LEFT,RGHT,ENT,           \
-           LSFT,TRNS,TRNS,TRNS,TRNS,TRNS,PPLS,PMNS,END, PGDN,DOWN,RSFT,FN0,           \
+           CAPS,MPRV,MPLY,MFFD,NO  ,NO  ,NO  ,NO  ,PSCR,SLCK,PAUS,UP,  NO  ,BSPC,     \
+           LCTL,VOLD,VOLU,MUTE,NO  ,NO  ,PAST,PSLS,HOME,PGUP,LEFT,RGHT,ENT,           \
+           LSFT,NO  ,NO  ,NO  ,NO  ,NO  ,PPLS,PMNS,END, PGDN,DOWN,RSFT,FN0,           \
                 LALT,LGUI,          SPC,                RGUI,FN1),
 
     /* Layer 2: Mouse Mode for WASD
      * ,-----------------------------------------------------------.
-     * |Esc|  1|  2|  3|  4|  5|  6|  7|  8|  9|  0|  -|  =|  \|  `|
+     * |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
      * |-----------------------------------------------------------|
-     * |Tab  |  Q|McU|  E|  R|  T|  Y|  U|  I|  O|  P|  [|  ]|Backs|
+     * |     |   |McU|   |   |   |   |   |   |   |   |   |   |     |
      * |-----------------------------------------------------------|
-     * |Contro|McL|McD|McR|  F|  G|  H|  J|  K|  L|  ;|  '|Enter   |
+     * |      |McL|McD|McR|   |   |   |   |   |   |   |   |        |
      * |-----------------------------------------------------------|
-     * |Shift   |  Z|  X|  C|  V|  B|  N|  M|  ,|  .|  /|Shift |Fn0|
+     * |        |   |   |   |   |   |   |   |   |   |   |      |Fn0|
      * `-----------------------------------------------------------'
-     *       |Alt|Gui  |         Space         |Gui  |Fn1|
+     *       |   |Rclck|       Left Click      |Rclck|Fn1|
      *       `-------------------------------------------'
      */
-    KEYMAP(ESC, 1,   2,   3,   4,   5,   6,   7,   8,   9,   0,   MINS,EQL, BSLS,GRV, \
-           TAB, Q,   MS_U,E,   R,   T,   Y,   U,   I,   O,   P,   LBRC,RBRC,BSPC,     \
-           LCTL,MS_L,MS_D,MS_R,F,   G,   H,   J,   K,   L,   SCLN,QUOT,ENT,           \
-           LSFT,Z,   X,   C,   V,   B,   N,   M,   COMM,DOT, SLSH,RSFT,FN0,           \
-                LALT,LGUI,          BTN1,               RGUI,FN1)
+    KEYMAP(NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,  \
+           NO  ,NO  ,MS_U,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,       \
+           NO  ,MS_L,MS_D,MS_R,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,            \
+           NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,NO  ,FN0,             \
+                NO  ,BTN2,          BTN1,               BTN2,FN1)
 };
 
 /*
